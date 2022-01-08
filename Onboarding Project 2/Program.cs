@@ -28,8 +28,8 @@ namespace Onboarding_Project_2
             Customer customer = new Customer();
             
             //NOT SURE ABOUT THIS, probably should remove it.
-            CustomerValidator validator = new CustomerValidator();
-            var result = validator.Validate(customer);
+            //CustomerValidator validator = new CustomerValidator();
+            //var result = validator.Validate(customer);
 
 
             Console.WriteLine("Welcome to the Onboarding sign-up/log-in project.");
