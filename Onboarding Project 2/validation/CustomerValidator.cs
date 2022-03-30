@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
-using FluentValidation;
-using Onboarding_Project_2;
+﻿using FluentValidation;
 using Onboarding_Project_2.models;
 
 namespace Onboarding_Project_2.validation
@@ -16,22 +9,22 @@ namespace Onboarding_Project_2.validation
         public CustomerValidator()
         {
             RuleFor(customer => customer.loginEmail)
-                .NotNull().WithMessage("Please enter an email.")
+                .NotNull().WithMessage("You did not enter an email. Please try again.")
                 .EmailAddress().WithMessage("Please use a correct email format.");
             RuleFor(customer => customer.loginPassword)
-                .NotNull().WithMessage("Please enter a password.");
+                .NotNull().WithMessage("You did not enter a password. Please try again.");
             RuleFor(customer => customer.registerEmail)
-                .NotNull().WithMessage("Please enter an email.")
+                .NotNull().WithMessage("You did not enter an email. Please try again.")
                 .EmailAddress().WithMessage("Please use a correct email format.");
             RuleFor(customer => customer.registerPassword)
-                .NotNull().WithMessage("Please enter a password.");
+                .NotNull().WithMessage("You did not enter a password. Please try again.");
             RuleFor(customer => customer.registerFirstName)
-                .NotNull().WithMessage("Please enter a first name.");
+                .NotNull().WithMessage("You did not enter a first name. Please try again.");
             RuleFor(customer => customer.registerLastName)
-                .NotNull().WithMessage("Please enter a last name.");
+                .NotNull().WithMessage("You did not enter a last name. Please try again.");
             RuleFor(customer => customer.registerPhoneNo)
-                .NotNull().WithMessage("Please enter a phone number.");
-         
+                .NotNull().WithMessage("You did not enter a phone number. Please try again.");
+
         }
 
 
